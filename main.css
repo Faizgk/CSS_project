@@ -1,0 +1,169 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+}
+
+body{
+    margin: 0;
+    background-image: url(/bg-image.jpg);
+}
+
+/*todo : remove this and div>div */
+/* div {
+    border: 2px solid black;
+} */
+
+div > div {
+    border: none; /* Removes border from nested divs */
+}
+
+
+
+.navigation-bar{
+    height : auto;
+    width : auto;
+    max-height: 50vh;
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.671), rgba(32, 31, 31, 0.671) );
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: center;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    transition: all ease-in-out 1s;
+}
+
+.navigation-bar > div{
+    display: inline-block;
+}
+.logo{
+    display: inline-block;
+    height: 100%;
+    width: 50px;
+}
+.title{
+    display: inline-block;
+    position: relative;
+    bottom: 13px;
+}
+
+.logo img {
+    position: relative;
+    top: 2.25px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 100%;
+    object-fit: contain;
+    animation: flip-func 5s ease infinite;
+}
+
+@keyframes flip-func{
+
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(0deg); 
+    }
+
+}
+.title h2 {
+	color: rgb(255, 255, 255);
+}
+
+.favourites {
+	color: white;
+    font-weight: 100;
+}
+
+.search-input{
+    position: relative;
+    width: 300px;
+}
+
+.search-input input{
+    width: 100%;
+    padding-left: 40px;
+    height: 40px;
+    box-sizing: border-box; /*include padding and border in the total width calculation so that it wont be longer than its parent*/
+}
+
+.search-input .search-ico{
+    position: absolute;
+    left : 10px;
+    top: 12px;
+}
+
+.notification-bell{
+    height: auto;
+    width: auto;
+    display: flex;
+
+}
+.notification-bell i{
+ color: white;
+ font-size : 20px;
+ padding-right: 5px;
+
+}
+
+.notification-text{
+    font-size: 1rem;
+    color: white;
+}
+
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.profile-picture img{
+ height: 100%;
+ width: 100%;
+ object-fit: contain;
+}
+
+.carousel{
+    margin-top: 70px;
+    position: relative;
+    left: 5%;
+    width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    overflow: visible;
+    justify-content: space-between;    
+    box-sizing: border-box;
+}
+
+.carousel img {
+    width: 33.33%;
+    height: 250px; 
+    object-fit: fill; 
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    /* transform-origin: top center; */
+}
+
+.carousel img:hover {
+    transform: scale(1.25);
+    z-index: 1; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.latest-release > h1{
+
+    color: white;
+    position: relative;
+    left: 5%;
+    margin-top: 50px;
+}
