@@ -82,6 +82,7 @@ div > div {
 .favourites {
 	color: white;
     font-weight: 100;
+    margin: 15px;
 }
 
 .search-input{
@@ -160,10 +161,92 @@ div > div {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
 }
 
-.latest-release > h1{
-
-    color: white;
-    position: relative;
-    left: 5%;
+.latest-release {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 50px;
+    margin-left: 5%;
+    width: 1200px;
+
+    border: 2px solid rgb(148, 107, 107);
+}
+
+.latest-release > h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.latest-release-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100px;
+    width: 600px;
+    border: 2px solid rgb(147, 147, 160);
+    background-color: rgb(27, 25, 25);
+}
+
+.latest-release-card img {
+    height: 100%;
+    width: auto; 
+    object-fit: cover;
+    max-width: 300px;
+}
+
+.card-details{
+    margin-left: 5%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.dropdown{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+.dropdown-button{
+    position: absolute;
+    left: 88%;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+    cursor: pointer;
+    letter-spacing: 0.12cm;
+}
+.dropdown-button:hover{
+    opacity: 60%;
+}
+
+.dropdown-content{
+    display: none;
+    padding: 3px;
+    background-color: rgb(73, 69, 69);
+    border: 2px solid rgb(104, 104, 104);
+    position: absolute;
+    z-index: 1;
+    left: 48%;
+    top: 10%;
+    width: fit-content;
+}
+.dropdown-content > li {
+    color: white;
+    list-style-type: none;
+}
+
+/*trick for click*/ 
+.dropdown input[type="checkbox"] {
+    display: none;
+}
+#dropdown-toggle:checked ~ .dropdown-content {
+    display: block;
+}
+.dropdown-content > li > a{
+    text-decoration: none;
+    color: white;
 }
