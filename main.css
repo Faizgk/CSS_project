@@ -171,7 +171,11 @@ aside{
 @media (max-width: 1145px) { /* Use media query instead of container query */
     .carousel {
         flex-direction: column; /* Switch to column when screen width is narrow */
-        width: 100%;
+    }
+    .carousel > img{
+        width : 50%;
+        height: auto;
+        transform-origin: left ;
     }
 }
 .latest-release-section{
