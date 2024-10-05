@@ -235,6 +235,7 @@ aside{
 }
 
 .dropdown{
+    position: relative;
     height: auto;
     width: 40px;
     display: block;
@@ -259,14 +260,15 @@ color: rgba(20, 134, 115, 0.685);
 
 .dropdown-content{
     display: none;
+    position: absolute;
     padding: 3px;
     background-color: rgb(73, 69, 69);
     border: 2px solid rgb(104, 104, 104);
     position: absolute;
+    left: 10%;
+    width: 150px;
     z-index: 1;
-    left: 48%;
-    top: 10%;
-    width: fit-content;
+    top: 20%;
 }
 .dropdown-content > li {
     color: white;
@@ -277,13 +279,14 @@ color: rgba(20, 134, 115, 0.685);
 .dropdown input[type="checkbox"] {
     display: none;
 }
-#dropdown-toggle:checked ~ .dropdown-content {
-    display: block;
-}
-#dropdown-toggle:checked ~ .dropdown-content {
-    display: block;
-}
+
 .dropdown-content > li > a{
     text-decoration: none;
     color: white;
+    display: inline-block;
 }
+.dropdown-toggle:checked ~ .dropdown-content {
+    display: block;
+    right: 0; 
+}
+
