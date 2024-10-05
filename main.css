@@ -149,6 +149,7 @@ aside{
     overflow: visible;
     justify-content: flex-start;  
     box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.267);
 }
 
 .carousel img {
@@ -299,7 +300,7 @@ color: rgba(20, 134, 115, 0.685);
 
 @media (max-width: 1145px) { 
     .carousel {
-        /* flex-direction: column; */
+        /* flex-direction: row; */
         justify-content: center;
         background-color: rgba(177, 175, 175, 0.247);
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
@@ -316,7 +317,7 @@ color: rgba(20, 134, 115, 0.685);
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
     }
     .latest-release-card{
-        width: 100%;
+        width: 100%; /*make the card take up whole width of the container for smaller screens*/
     }
 }
 
