@@ -199,9 +199,14 @@ aside{
     height: auto;
     width: 40%;
     min-width: 300px;
-    background-color: rgba(99, 94, 94, 0.349);
+    background-color: rgba(114, 110, 110, 0.349);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.267);
+    transition: background-color 0.1s ease-in-out, box-shadow 0.1s ease; 
 
+}
+.latest-release-card:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5); 
 }
 
 .latest-release-card img {
@@ -244,13 +249,14 @@ aside{
     border: none;
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: rgb(184, 180, 180);
     padding: 0;
     cursor: pointer;
     letter-spacing: 0.12cm;
+    transition: all ease-in-out 0.1s;
 }
 .dropdown-button:hover{
-    opacity: 60%;
+    color: rgb(0, 0, 0);
 }
 
 .dropdown-content{
