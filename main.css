@@ -132,26 +132,33 @@ div > div {
  width: 100%;
  object-fit: contain;
 }
+aside{
+    /* border: 2px solid white; */
+    width: 73vw;
+}
 
 .carousel{
     margin-top: 70px;
     position: relative;
     left: 5%;
-    width: 1200px;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     overflow: visible;
-    justify-content: space-between;    
+    justify-content: start;    
     box-sizing: border-box;
 }
 
 .carousel img {
     width: 33.33%;
-    height: 250px; 
+    height: auto; 
     object-fit: fill; 
     box-sizing: border-box;
     transition: transform 0.3s ease;
+    min-height: 80px;
+    min-width: 250px;
     /* transform-origin: top center; */
 }
 
@@ -160,16 +167,24 @@ div > div {
     z-index: 1; 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
 }
+.latest-release-section{
+    /* border: 2px solid red; */
+    margin-left: 5%;
+    width: 90%;
+}
+.latest-release-section > h1{
+    margin-top: 40px;
+    color: white;
+}
 
 .latest-release {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
-    margin-top: 50px;
-    margin-left: 5%;
-    width: 1200px;
-
-    border: 2px solid rgb(148, 107, 107);
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .latest-release > h1 {
@@ -180,36 +195,51 @@ div > div {
 .latest-release-card {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    height: 100px;
-    width: 600px;
-    border: 2px solid rgb(147, 147, 160);
-    background-color: rgb(27, 25, 25);
+    justify-content: space-between;
+    height: auto;
+    width: 40%;
+    min-width: 300px;
+    background-color: rgba(99, 94, 94, 0.349);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.267);
+
 }
 
 .latest-release-card img {
-    height: 100%;
-    width: auto; 
-    object-fit: cover;
-    max-width: 300px;
+    height: auto;
+    width: 33.33%; 
+    max-width: 100px;
+    min-width: 100px;
+    margin-right: 20px;
 }
 
 .card-details{
-    margin-left: 5%;
     color: white;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    overflow: hidden;
 }
+/*below code is handle long title*/
+.card-details h3 {
+    white-space: nowrap;       
+    overflow: hidden;           
+    text-overflow: ellipsis;    
+    max-width: 100%;            
+    display: block;           
+}
+
 .dropdown{
-    position: relative;
     height: auto;
-    width: 100%;
+    width: 40px;
+    display: block;
+}
+.dropdown > p{
+    margin-top: 20px;
+    color: white;
 }
 .dropdown-button{
-    position: absolute;
-    left: 88%;
     background-color: transparent;
     border: none;
     font-size: 24px;
@@ -242,6 +272,9 @@ div > div {
 /*trick for click*/ 
 .dropdown input[type="checkbox"] {
     display: none;
+}
+#dropdown-toggle:checked ~ .dropdown-content {
+    display: block;
 }
 #dropdown-toggle:checked ~ .dropdown-content {
     display: block;
