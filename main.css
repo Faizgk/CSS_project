@@ -147,7 +147,7 @@ aside{
     flex-direction: row;
     flex-wrap: wrap;
     overflow: visible;
-    justify-content: start;    
+    justify-content: flex-start;  
     box-sizing: border-box;
 }
 
@@ -166,6 +166,13 @@ aside{
     transform: scale(1.25);
     z-index: 1; 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 1145px) { /* Use media query instead of container query */
+    .carousel {
+        flex-direction: column; /* Switch to column when screen width is narrow */
+        width: 100%;
+    }
 }
 .latest-release-section{
     /* border: 2px solid red; */
