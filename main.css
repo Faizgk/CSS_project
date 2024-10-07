@@ -379,7 +379,7 @@ color: rgba(20, 134, 115, 0.685);
     display: flex;
     flex-wrap: wrap;
     height: auto;
-    justify-content: start;
+    justify-content: space-between;
     gap: 2vh;
     justify-content: flex-start;
     height: fit-content;
