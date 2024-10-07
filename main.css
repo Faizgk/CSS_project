@@ -381,8 +381,6 @@ color: rgba(20, 134, 115, 0.685);
     height: auto;
     justify-content: start;
     gap: 2vh;
-    width: 100%;
-
     justify-content: flex-start;
     height: fit-content;
     flex-wrap: nowrap;
@@ -390,10 +388,24 @@ color: rgba(20, 134, 115, 0.685);
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    scrollbar-color: #b1a8a8 #3f3a3a;
-    background-color: rgb(102, 86, 72);
+    scrollbar-color: #a5a1a1 #252323;
+    /* position: relative; */
+ 
 
 }
+
+/* .music-themes-section::after {
+    content: '';
+    position: relative;
+    bottom: 50%;
+    right: 0;
+    height: 100%;
+    width: 50px; 
+    pointer-events: none;
+    z-index: 3;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.925), transparent);
+} */
+
 
 .theme{
     /* border: 2px solid red; */
@@ -480,11 +492,15 @@ color: rgba(20, 134, 115, 0.685);
     .theme{
         flex: 0 0 auto;
         scroll-snap-align: start;
-        animation: scrollHint 2s ease 1;  /*auto scroll animation*/
+        animation: scrollHint 1s ease-in 1 reverse;  /*auto scroll animation*/
 
     }
     .popular-artists-content{
         justify-content: space-around;
+    }
+
+    .music-themes-section{
+        border-right: 15px double rgba(199, 196, 196, 0.8);
     }
 
 }
@@ -496,12 +512,9 @@ color: rgba(20, 134, 115, 0.685);
         transform: translateX(0);
 
     }
-    50%{
+    100%{
         transform: translateX(-60px);
 
-    }
-    100%{
-        transform: translate(0);
     }
 
 }
