@@ -309,8 +309,8 @@ color: rgba(20, 134, 115, 0.685);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rebeccapurple;
     width: 20vw;
+    height: auto;
     min-width: 130px;
     max-width: 200px;
 }
@@ -337,15 +337,11 @@ color: rgba(20, 134, 115, 0.685);
     object-fit: cover;
     height: 100%;
     width: 100%;
-    /* max-width: 200px;
-    min-width: 50px */
 }
 
 /*the play button which appears over the artist's image on hover*/
 .play-effect{
     position: absolute;
-    top: 42.25%;
-    left: 45%;
     font-size: 2rem;
     color: rgb(255, 255, 255);
     opacity: 0;
