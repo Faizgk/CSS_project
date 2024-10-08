@@ -425,7 +425,7 @@ color: rgba(20, 134, 115, 0.685);
     position: relative;
     bottom : 55%;
     display: flex;
-    font-size: 3vh;
+    font-size: 2vw;
     text-shadow: -2px -2px 1px rgb(0, 0, 0);
     font-weight: bold;
     color: rgb(228, 236, 234);
@@ -451,6 +451,13 @@ color: rgba(20, 134, 115, 0.685);
     background-color: #666; 
 }
 
+.music-themes-section{
+    padding-top: 20px;
+}
+.theme:hover{
+   transform: translateY(-20px);
+   transition: all 0.4s ease;
+}
 
 
 
@@ -460,7 +467,9 @@ color: rgba(20, 134, 115, 0.685);
     aside{
         margin: 12.5vw;
     }
-
+    .theme > h2{
+        font-size: 20px;
+    }
     /*make the dropdown pop-out to the left if the screen width isn't available to pop at the right*/
     .dropdown-content{
         left: auto;
@@ -510,10 +519,9 @@ color: rgba(20, 134, 115, 0.685);
 @keyframes scrollHint{
     0%{
         transform: translateX(0);
-
     }
     100%{
-        transform: translateX(-60px);
+        transform: translateX(-120px);
 
     }
 
