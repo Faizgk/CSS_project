@@ -531,7 +531,7 @@ color: rgba(20, 134, 115, 0.685);
 }
  .latest-section-card > div > img{
     background-color: #252323;
-    transition: opacity 2s ease;
+    transition: opacity 1s ease;
 }
 .latest-section-card > p{
     display: flex;
@@ -548,7 +548,7 @@ color: rgba(20, 134, 115, 0.685);
  
 .latest-section-card:hover .play-effect{
     opacity: 1;
-    transition: opacity 4s ease;
+    transition: opacity 3s ease;
 }
 
 
