@@ -558,6 +558,7 @@ color: rgba(20, 134, 115, 0.685);
 .latest-section-card:hover .play-effect{
     opacity: 1;
     transition: opacity 3s ease;
+    cursor: pointer;
 }
 
 
