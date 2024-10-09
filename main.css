@@ -138,7 +138,7 @@ div > div {
  object-fit: contain;
 }
 aside{
-    border: 2px solid white;
+    /* border: 2px solid white; */
     width: 73vw;
 }
 
@@ -502,7 +502,7 @@ color: rgba(20, 134, 115, 0.685);
 
 .latest-section-content{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -529,20 +529,26 @@ color: rgba(20, 134, 115, 0.685);
     transform: scale(1.05);
     /* background-color: #d0d4d449; */
 }
+ .latest-section-card > div > img{
+    background-color: #252323;
+    transition: opacity 2s ease;
+}
 .latest-section-card > p{
     display: flex;
-    margin-bottom: 7px;
+    margin-top: 3px;
     font-size: 97%;
     cursor: pointer;
+}
+.latest-section-card:hover > div > img{
+    opacity: 50%;
 }
 .latest-section-card:hover > p {
     font-weight: 520;
 }
  
 .latest-section-card:hover .play-effect{
-    opacity: 0.8;
-    cursor: pointer;
-    transition: opacity 1s ease;
+    opacity: 1;
+    transition: opacity 4s ease;
 }
 
 
