@@ -475,6 +475,7 @@ color: rgba(20, 134, 115, 0.685);
     /* margin-bottom: 20px; */
     height: auto;
     overflow: hidden;
+    background-color: rgba(29, 28, 28, 0.9);
     /* border: 2.9px solid rgba(194, 190, 190, 0.733); */
 }
 
@@ -529,23 +530,31 @@ color: rgba(20, 134, 115, 0.685);
     transform: scale(1.05);
     /* background-color: #d0d4d449; */
 }
- .latest-section-card > div > img{
+
+/*the div with image and play-button*/
+/*bg color will help to not see root bg through the image root-bg during hover opacity reduction*/
+.latest-section-card > div {
     background-color: #252323;
-    transition: opacity 1s ease;
 }
+
+
 .latest-section-card > p{
     display: flex;
     margin-top: 3px;
     font-size: 97%;
     cursor: pointer;
 }
+.latest-section-card:hover > p {
+    font-weight: bolder;
+}
+
+.latest-section-card > div > img{
+    transition: opacity 1s ease;
+}
+
 .latest-section-card:hover > div > img{
     opacity: 50%;
 }
-.latest-section-card:hover > p {
-    font-weight: 520;
-}
- 
 .latest-section-card:hover .play-effect{
     opacity: 1;
     transition: opacity 3s ease;
