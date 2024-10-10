@@ -503,12 +503,13 @@ color: rgba(20, 134, 115, 0.685);
 
 .latest-section-content{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
+    /* border: 1px solid red; */
 }
 
 .latest-section-card{
-    margin: 10px;
+    margin: 10px 20px 10px 0px;
     width: 10.5%;
     height: auto;
     display: flex;
@@ -636,7 +637,9 @@ color: rgba(20, 134, 115, 0.685);
     .latest-section-card > p{
         font-size: 85%;
     }
-
+    .artist-card{
+        max-width: 100px;
+    }
 
 }
 
