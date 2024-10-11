@@ -137,9 +137,23 @@ div > div {
  width: 100%;
  object-fit: contain;
 }
+
 aside{
     /* border: 2px solid white; */
+    /* width: 73vw; */
+    display: inline-block;
+}
+.aside-1{
     width: 73vw;
+    height: 85vh;
+    overflow-y: auto;
+}
+.aside-2{
+    width: 22vw;
+    margin: 10px;
+    position: relative;
+    margin-top: 70px;
+    vertical-align: top; /* keep the playlist at the top of the second half*/
 }
 
 .carousel{
@@ -241,6 +255,13 @@ aside{
     text-overflow: ellipsis;    
     max-width: 100%;            
     display: block;           
+}
+.card-details p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
 }
 
 .dropdown{
@@ -433,20 +454,23 @@ color: rgba(20, 134, 115, 0.685);
     z-index: 1;
 }
 
-.music-themes-section::-webkit-scrollbar {
-    height: 13px;
+::-webkit-scrollbar {
+    width: 2px;
 }
-.music-themes-section::-webkit-scrollbar-track {
-    background: #222; 
+::-webkit-scrollbar-track {
+    background: none; 
 }
-.music-themes-section::-webkit-scrollbar-thumb {
-    background-color: #999; 
-    border-radius: 10px; 
-    border: 2px solid #222; 
+::-webkit-scrollbar-track:hover{
+    background: #2c2b2b; 
 }
 
-.music-themes-section::-webkit-scrollbar-thumb:hover {
-    background-color: #666; 
+::-webkit-scrollbar-thumb {
+    background-color: #999; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar:hover {
+    background-color: #444242; 
 }
 
 .music-themes-section{
@@ -511,7 +535,7 @@ color: rgba(20, 134, 115, 0.685);
 .latest-section-card{
     margin: 10px 20px 10px 0px;
     width: 10.5%;
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     min-width: 100px;
@@ -540,10 +564,12 @@ color: rgba(20, 134, 115, 0.685);
 
 
 .latest-section-card > p{
-    display: flex;
     margin-top: 3px;
     font-size: 97%;
     cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .latest-section-card:hover > p {
     font-weight: bolder;
@@ -561,8 +587,40 @@ color: rgba(20, 134, 115, 0.685);
     transition: opacity 3s ease;
     cursor: pointer;
 }
+.playlist-content{
+    height: 70vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
+.playlist-heading{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.playlist-card{
+    padding: 0px 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    flex-direction: row;
+    width: 99%;
+    background-color: rgb(60, 90, 86);
+    margin-bottom: 5px;
+}
+.playlist-card > img{
+    width: 40%;
+    max-width: 100px;
+    min-width: 70px;
+    margin: 0px 10px;
+}
 
+.playlist-card > .card-details{
+    margin-right: 10px;
+    width: 70%;
+}
 
 .flex-center{
  display: flex;
@@ -574,7 +632,12 @@ color: rgba(20, 134, 115, 0.685);
 
 
 
+
 @media (max-width: 1120px) { 
+
+    .aside-1{
+        height: auto;
+    }
 
     /*check on this*/
     aside{
@@ -639,6 +702,16 @@ color: rgba(20, 134, 115, 0.685);
     }
     .artist-card{
         max-width: 100px;
+    }
+    .aside-2{
+        width: 50vw;
+        margin: 0;
+    }
+    .playlist-card > div{
+
+        margin-left: 5%;
+        margin-right: 5%;
+
     }
 
 }
