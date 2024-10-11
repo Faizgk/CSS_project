@@ -26,9 +26,8 @@ div > div {
 
 .navigation-bar{
     height : auto;
-    width : 100%;
     max-height: 300px;
-	background-image: linear-gradient(180deg, rgb(0, 0, 0), rgb(32, 31, 31) );
+	background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(32, 31, 31, 0) );
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -145,12 +144,13 @@ aside{
     display: inline-block;
 }
 .aside-1{
-    width: 73vw;
+    width: 73%;
     height: 85vh;
     overflow-y: auto;
+    overflow-x: auto;
 }
 .aside-2{
-    width: 22vw;
+    width: 22%;
     margin: 10px;
     position: relative;
     margin-top: 70px;
@@ -311,9 +311,13 @@ color: rgba(20, 134, 115, 0.685);
     display: none;
 }
 
-.dropdown-content > li > a{
+.anchor-decor{
     text-decoration: none;
     color: white;
+}
+
+.dropdown-content > li > a{
+
     display: inline-block;
 }
 .dropdown-toggle:checked ~ .dropdown-content {
@@ -589,7 +593,7 @@ color: rgba(20, 134, 115, 0.685);
     cursor: pointer;
 }
 .playlist-content{
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
