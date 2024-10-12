@@ -159,9 +159,10 @@ aside{
 }
 .more-button{
     display: none;
+    border-radius: 50%;
     position: fixed;
-    top: 17%;
-    right: 5%;
+    top: 150px;
+    left: 5%;
     padding: 5px;
     background-color: #4b4747;
     border: 1px solid white;
@@ -662,7 +663,6 @@ color: rgba(20, 134, 115, 0.685);
    
 
     .navigation-bar{
-        background-color: #252323;
         position: fixed;
         z-index: 1000;
         width: 90%;
@@ -692,6 +692,9 @@ color: rgba(20, 134, 115, 0.685);
         height: 100%; /* Adjust height */
         z-index: 10000; /* Make sure it's above aside-1 */
      
+    }
+    #more-toggle:checked ~ label.more-button{
+        transform: translateX(60vw);
     }
 
     .theme > h2{
