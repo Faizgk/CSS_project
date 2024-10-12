@@ -488,7 +488,9 @@ color: rgba(20, 134, 115, 0.685);
     /* margin-bottom: 20px; */
     height: auto;
     overflow: hidden;
-    background-color:rgba(19, 19, 19, 0.9)
+    background-color:rgba(19, 19, 19, 0.9);
+    box-shadow: 0px 10px 30px;
+
     /* border: 2.9px solid rgba(194, 190, 190, 0.733); */
 }
 
@@ -496,7 +498,7 @@ color: rgba(20, 134, 115, 0.685);
 .mode .text-above-card{
     background-color: rgba(194, 17, 17, 0);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size : 3.5vh;
+    font-size : 200%;
     text-shadow: 0px 0px 4px rgb(0, 0, 0);
     cursor: default;
 }
