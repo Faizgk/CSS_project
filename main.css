@@ -153,9 +153,19 @@ aside{
 .aside-2{
     width: 22%;
     margin: 10px;
-    position: relative;
+    position: absolute;
     margin-top: 70px;
     vertical-align: top; /* keep the playlist at the top of the second half*/
+}
+.more-button{
+    display: none;
+    position: fixed;
+    top: 17%;
+    right: 5%;
+    padding: 10px;
+    background-color: #596bb9;
+    color: white;
+    z-index: 9000;
 }
 
 .carousel{
@@ -385,7 +395,6 @@ color: rgba(20, 134, 115, 0.685);
     opacity: 0;
     transition: opacity 0.3s ease;    
 }
-
 
 
 .artist-card-img-container:hover::after{
@@ -625,17 +634,59 @@ color: rgba(20, 134, 115, 0.685);
 
 
 @media (max-width: 1120px) { 
+    main{
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .aside-2{
+        position: relative;
+        width: 60vw;
+        height: 100vh;
+        z-index: 100000;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+    .playlist-content{
+        height: 90%;
+    }
+    .playlist-card > .card-details{
+        font-size: 0.75rem;
+    }
+   
 
     .navigation-bar{
+        background-color: #252323;
         position: fixed;
         z-index: 1000;
         width: 90%;
+        /* box-shadow: 0px 1px 10px; */
     }
 
     .aside-1{
         height: 95vh;
         margin-top: 220px;
         width: 99%;
+        border-top: 0.5px solid rgba(255, 255, 255, 0.199);
+
+    }
+    .more-button{
+        display: block;
+    }
+      /* Show the second aside when the checkbox is checked */
+    #more-toggle:checked ~ .aside-2 {
+        /* margin-top: 220px; */
+        display: block;
+        position: fixed;
+        overflow: hidden;
+        background-color: #182258;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%; /* Adjust height */
+        z-index: 10000; /* Make sure it's above aside-1 */
+     
     }
 
     .theme > h2{
