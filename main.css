@@ -769,7 +769,9 @@ color: rgba(20, 134, 115, 0.685);
         margin-right: 5%;
 
     }
-
+    .playlist-heading{
+        margin: 30px;
+    }
 }
 
 /*auto-scroll animation for smaller screens*/
