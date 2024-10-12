@@ -143,12 +143,12 @@ aside{
     /* width: 73vw; */
     display: inline-block;
 }
+
 .aside-1{
     margin-top: 40px;
-    width: 73%;
+    width: 75%;
     height: 85vh;
-    overflow-y: auto;
-    overflow-x: auto;
+    overflow-y: scroll;
 }
 .aside-2{
     width: 22%;
@@ -640,6 +640,7 @@ color: rgba(20, 134, 115, 0.685);
     .navigation-bar{
         position: fixed;
         z-index: 1000;
+        width: 90%;
     }
 
     .aside-1{
