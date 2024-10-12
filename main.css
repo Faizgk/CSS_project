@@ -179,8 +179,6 @@ aside{
     box-sizing: border-box;
     transition: transform 0.4s ease;
     min-height: 80px;
-    min-width: 250px;
-    /* transform-origin: top center; */
 }
 
 .carousel img:hover {
