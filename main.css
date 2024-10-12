@@ -85,12 +85,12 @@ div > div {
 }
 
 .favourites {
-	color: white;
     font-weight: 100;
     margin: 15px;
 }
 
 .search-input{
+    /*position made relative for positioning the mag-glass icon inside*/
     position: relative;
     width: 300px;
 }
@@ -99,15 +99,17 @@ div > div {
     width: 100%;
     padding-left: 40px;
     height: 40px;
-    box-sizing: border-box; /*include padding and border in the total width calculation so that it wont be longer than its parent*/
+    box-sizing: border-box;
 }
 
+/*magnifying glass icon*/
 .search-input .search-ico{
     position: absolute;
     left : 10px;
     top: 12px;
 }
 
+/*bell icon div*/
 .notification-bell{
     height: auto;
     width: auto;
@@ -138,9 +140,8 @@ div > div {
  object-fit: contain;
 }
 
+/*split screen*/
 aside{
-    /* border: 2px solid white; */
-    /* width: 73vw; */
     display: inline-block;
 }
 
@@ -157,6 +158,8 @@ aside{
     margin-top: 70px;
     vertical-align: top; /* keep the playlist at the top of the second half*/
 }
+
+/*open aside-2 element (queue/playlist section) button for low screen width*/
 .more-button{
     display: none;
     border-radius: 50%;
@@ -174,6 +177,8 @@ aside{
 .more-button:hover{
     background-image: linear-gradient(180deg, rgb(172, 165, 165), rgba(31, 30, 30, 0.747) );
 }
+
+/*carousel section*/
 .carousel{
     margin-bottom: 50px;
     position: relative;
@@ -203,6 +208,7 @@ aside{
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
 }
 
+/*common section heading style*/
 .heading-class{
     color: white;
     margin-bottom: 20px;
@@ -215,6 +221,7 @@ aside{
     width: 90%;
 }
 
+/*latest release section*/
 .latest-release {
     display: flex;
     flex-direction: row;
@@ -304,6 +311,8 @@ aside{
 color: rgba(20, 134, 115, 0.685);
 }
 
+
+
 .dropdown-content{
     display: none;
     position: absolute;
@@ -321,11 +330,12 @@ color: rgba(20, 134, 115, 0.685);
     list-style-type: none;
 }
 
-/*trick for click*/ 
+/*css trick for click to view*/ 
 .dropdown input[type="checkbox"] {
     display: none;
 }
 
+/*common <a>link styling*/
 .anchor-decor{
     text-decoration: none;
     color: white;
@@ -340,6 +350,16 @@ color: rgba(20, 134, 115, 0.685);
     right: 0; 
 }
 
+/*drop down in queue options*/
+.playlist-heading .dropdown{
+    width: fit-content;
+}
+
+.playlist-heading .dropdown-content{
+    bottom: -160%;
+    z-index: 7;
+     
+}
 
 .popular-artists-section{
     height: fit-content;
