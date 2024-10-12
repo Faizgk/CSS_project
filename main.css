@@ -144,6 +144,7 @@ aside{
     display: inline-block;
 }
 .aside-1{
+    margin-top: 40px;
     width: 73%;
     height: 85vh;
     overflow-y: auto;
@@ -158,9 +159,8 @@ aside{
 }
 
 .carousel{
-    margin-top: 70px;
+    margin-bottom: 50px;
     position: relative;
-    left: 5%;
     width: 90%;
     height: auto;
     display: flex;
@@ -185,7 +185,6 @@ aside{
 
 .carousel img:hover {
     transform: scale(1.25);
-    z-index: 1; 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
 }
 
@@ -296,10 +295,10 @@ color: rgba(20, 134, 115, 0.685);
     background-color: rgb(73, 69, 69);
     border: 2px solid rgb(104, 104, 104);
     position: absolute;
-    left: 10%;
+    right: 10%;
     width: 150px;
     z-index: 1;
-    top: 20%;
+    bottom: 85%;
 }
 .dropdown-content > li {
     color: white;
