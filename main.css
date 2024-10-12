@@ -337,10 +337,10 @@ color: rgba(20, 134, 115, 0.685);
 }
 
 .artist-card{
-    width: 20vw;
+    /* width: 20vw; */
     height: auto;
     min-width: 130px;
-    max-width: 200px;
+    max-width: 180px;
 }
 .artist-card-img-container{
     height: 100%;
@@ -399,10 +399,8 @@ color: rgba(20, 134, 115, 0.685);
 .music-themes-section{
     display: flex;
     flex-wrap: wrap;
-    height: auto;
     justify-content: space-between;
     gap: 2vh;
-    justify-content: flex-start;
     height: fit-content;
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -414,19 +412,6 @@ color: rgba(20, 134, 115, 0.685);
  
 
 }
-
-/* .music-themes-section::after {
-    content: '';
-    position: relative;
-    bottom: 50%;
-    right: 0;
-    height: 100%;
-    width: 50px; 
-    pointer-events: none;
-    z-index: 3;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.925), transparent);
-} */
-
 
 .theme{
     /* border: 2px solid red; */
