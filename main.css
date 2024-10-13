@@ -10,17 +10,12 @@ p {
 
 body{
     margin: 0;
-    background-image: url(/bg-image.jpg);
+    background-image: url(/bg-image.jpg), url(/sky.jpg);
+    /* background-position: center; */
+
 }
 
-/*todo : remove this and div>div */
-/* div {
-    border: 2px solid black;
-} */
 
-div > div {
-    border: none; /* Removes border from nested divs */
-}
 
 
 
@@ -248,7 +243,7 @@ aside{
     transition: width 0.4s ease,  all 0.3s ease; 
 }
 .latest-release-card:hover {
-    box-shadow: 0px 0px 35px rgba(185, 185, 185, 0.6); 
+    box-shadow: 0px 0px 35px rgba(13, 172, 145, 0.685); 
     /* box-shadow: 0px 0px 35px rgba(24, 126, 126, 0.6);  */
     transform: scale(103%);
     z-index: 1;
@@ -651,7 +646,7 @@ color: rgba(20, 134, 115, 0.685);
     width: 70%;
 }
 .playlist-card:hover{
-    background-color: rgba(146, 144, 144, 0.26);
+    background-color:rgba(7, 78, 66, 0.685);
 }
 
 .flex-center{
@@ -757,7 +752,7 @@ color: rgba(20, 134, 115, 0.685);
     }
     .latest-release-card:hover{
         box-shadow: none;
-        border: 1px solid rgba(255, 255, 255, 0.671);
+        border: 1px solid rgba(13, 172, 145, 0.685); 
         box-sizing: border-box;
     }
    
