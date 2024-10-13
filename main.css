@@ -196,6 +196,7 @@ aside{
 .carousel img {
     width: 33.33%;
     min-width: 200px;
+    max-height: 250px;
     height: auto; 
     object-fit: fill; 
     box-sizing: border-box;
