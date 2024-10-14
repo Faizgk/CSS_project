@@ -16,6 +16,7 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
     background-image: url(/bg-image.jpg), url(/sky.jpg);
     display: flex;
     flex-direction: column;
@@ -24,13 +25,12 @@ html, body{
 
 
 main{
-    border: 3px solid blue;
-    overflow: hidden;
-    flex: 1;
+    overflow: scroll;
+    box-sizing: border-box;
 }
 
+
 .navigation-bar{
-    border: 2px solid red;
 	background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(32, 31, 31, 0) );
     display: flex;
     flex-direction: row;
@@ -41,11 +41,9 @@ main{
     padding-right: 5%;
     transition: all ease-in-out 1s;
     position: sticky;
+    gap: 1vh;
 }
 
-.navigation-bar > div{
-    display: inline-block;
-}
 .logo{
     display: inline-block;
     height: 100%;
@@ -150,11 +148,12 @@ aside{
 
 .aside-1{
     width: 75%;
-    height: 86vh;
+    height: 100%;
     overflow-y: scroll;
+    border:  2px solid white;
 }
 .aside-2{
-    height: 86vh;
+    height: 87%;
     width: 24%;
     position: absolute;
     vertical-align: top; /* keep the playlist at the top of the second half*/
@@ -163,20 +162,17 @@ aside{
 /*open aside-2 element (queue/playlist section) button for low screen width*/
 .more-button{
     display: none;
-    border-radius: 50%;
-    position: fixed;
-    top: 160px;
-    left: 5%;
     padding: 5px;
-    background-color: #4b4747;
-    border: 1px solid white;
+    border: 0.2px solid white;
     color: white;
+    background-image: linear-gradient(180deg, rgb(172, 165, 165), #0f4638);
     z-index: 9000;
 
 }
 
 .more-button:hover{
-    background-image: linear-gradient(180deg, rgb(172, 165, 165), rgba(31, 30, 30, 0.747) );
+    background-image: linear-gradient(180deg,#0f4638, rgb(172, 165, 165));
+
 }
 
 /*carousel section*/
@@ -688,18 +684,9 @@ color: rgba(20, 134, 115, 0.685);
     .playlist-card > .card-details{
         font-size: 0.75rem;
     }
-   
-
-    .navigation-bar{
-        gap: 0.5vh;
-        z-index: 1000;
-        width: 90%;
-        /* box-shadow: 0px 1px 10px; */
-    }
 
     .aside-1{
-        height: 75vh;
-        margin-top: 150px;
+        height: 100%;
         width: 99%;
         border-top: 0.5px solid rgba(255, 255, 255, 0.199);
 
@@ -830,6 +817,7 @@ footer{
     box-shadow: 0px 0px 5px;
     border: 1px solid yellow;
     gap: 1vh;
+
 }
 footer > div {
     margin-top: 3px;
@@ -845,7 +833,6 @@ footer > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-shrink: 2;
   
 }
 
@@ -859,7 +846,6 @@ footer > div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-shrink: 3;
 
 }
 .music-controls > div{
@@ -873,7 +859,6 @@ footer > div {
     gap: 10px;
     margin: 0px 20px;
     width: 50vw;
-    flex-shrink: 4;
 
 
 }
@@ -882,11 +867,12 @@ footer > div {
  
     align-items: center;
     margin: 0px 20px;
-    flex-shrink: 5;
+
 
 }
 .slider-class{
     width: 90%;
+
 }
 .other-controls{
     display: flex;
