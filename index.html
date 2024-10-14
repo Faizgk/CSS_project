@@ -1,664 +1,895 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset= "UTF-8">
-        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Faiz's Audio Player</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
-        <link rel="stylesheet" type="text/css" href="query.css">
-        <script src ="https://kit.fontawesome.com/2d9b67a497.js" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/b3dd377625.js" crossorigin="anonymous"></script>
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faiz's Audio Player</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="query.css" />
+    <script
+      src="https://kit.fontawesome.com/2d9b67a497.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/b3dd377625.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-    <body>
-        <nav class="navigation-bar">
-            <!-- logo and title-->
-            <div class="logo-and-title">
-                <div class ="logo">
-                    <img src="/website_logo.png" alt="logo">
-                </div>
+  <body>
+    <nav class="navigation-bar">
+      <!-- logo and title-->
+      <div class="logo-and-title">
+        <div class="logo">
+          <img src="/website_logo.png" alt="logo" />
+        </div>
 
-                <div class ="title">
-                    <h2 class="font-color">5z Audio</h2>
-                </div>
+        <div class="title">
+          <h2 class="font-color">5z Audio</h2>
+        </div>
+      </div>
+      <!--favourites-->
+      <div class="favourites font-color">
+        <h4>Favourites</h4>
+      </div>
+      <!--search bar-->
+      <div class="search-input">
+        <!--magnifying glass icon-->
+        <i class="fas fa-search search-ico"></i>
+        <input type="text" name="search" placeholder="Search" />
+      </div>
+      <!-- notification bell-->
+      <div class="notification-bell">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notification-text">Notifications</span>
+      </div>
+      <!--profile picture-->
+      <div class="profile-picture">
+        <img src="/profile_picture.png" alt="profile-picture" />
+      </div>
+    </nav>
+    <main>
+      <input type="checkbox" id="more-toggle" hidden />
+      <label for="more-toggle" class="more-button">Queue</label>
+      <aside class="aside-1">
+        <!--carousel-->
+        <div class="carousel section-margin">
+          <img src="/carousel/carousel3.jpg" />
+          <img src="/carousel/carousel-new.jpg" />
+          <img src="/carousel/carousel-new2.jpg" />
+        </div>
+
+        <!--latest relase section-->
+        <div class="latest-release-section section-margin">
+          <h1 class="heading-class">Latest Release</h1>
+          <div class="latest-release">
+            <!--cards-->
+
+            <div id="card-1" class="latest-release-card">
+              <img src="/latest-release-card/latest-release-1 (2).jpg" />
+              <div class="card-details">
+                <h3>Valley</h3>
+                <p>Dec, 2024</p>
+              </div>
+              <div class="dropdown">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle-1"
+                  class="dropdown-toggle"
+                />
+                <label for="dropdown-toggle-1" class="dropdown-button"
+                  >...</label
+                >
+                <ul class="dropdown-content">
+                  <li>
+                    <i class="fas fa-play-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Play Now</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-list-ul"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Queue</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-music"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Playlist</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-info-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Get Info</a
+                    >
+                  </li>
+                </ul>
+                <p>3.35</p>
+              </div>
             </div>
-            <!--favourites-->
-            <div class ="favourites font-color">
-                <h4>Favourites</h4>
+
+            <div id="card-2" class="latest-release-card">
+              <img src="/latest-release-card/latest-release-2.jpg" />
+              <div class="card-details">
+                <h3>Stockholm Syndrome</h3>
+                <p>Dec, 2024</p>
+              </div>
+              <div class="dropdown">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle-2"
+                  class="dropdown-toggle"
+                />
+                <label for="dropdown-toggle-2" class="dropdown-button"
+                  >...</label
+                >
+                <ul class="dropdown-content">
+                  <li>
+                    <i class="fas fa-play-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Play Now</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-list-ul"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Queue</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-music"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Playlist</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-info-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Get Info</a
+                    >
+                  </li>
+                </ul>
+                <p>3.20</p>
+              </div>
             </div>
-            <!--search bar-->
-            <div class="search-input">
-                    <!--magnifying glass icon-->
-                    <i class="fas fa-search search-ico"></i>
-                    <input type="text" name ="search" placeholder= "Search">
+
+            <div id="card-3" class="latest-release-card">
+              <img src="/latest-release-card/latest-release-4.png" />
+              <div class="card-details">
+                <h3>Bliss</h3>
+                <p>Dec, 2024</p>
+              </div>
+              <div class="dropdown">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle-3"
+                  class="dropdown-toggle"
+                />
+                <label for="dropdown-toggle-3" class="dropdown-button"
+                  >...</label
+                >
+                <ul class="dropdown-content">
+                  <li>
+                    <i class="fas fa-play-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Play Now</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-list-ul"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Queue</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-music"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Playlist</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-info-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Get Info</a
+                    >
+                  </li>
+                </ul>
+                <p>3.02</p>
+              </div>
             </div>
-            <!-- notification bell-->
-            <div class="notification-bell">
-                <i class="fa-regular fa-bell"></i>               
-                <span class="notification-text">Notifications</span>
+
+            <div id="card-4" class="latest-release-card">
+              <img src="/latest-release-card/latest-release-4.jpg" />
+              <div class="card-details">
+                <h3>Meteoroid</h3>
+                <p>Dec, 2024</p>
+              </div>
+              <div class="dropdown">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle-4"
+                  class="dropdown-toggle"
+                />
+                <label for="dropdown-toggle-4" class="dropdown-button"
+                  >...</label
+                >
+                <ul class="dropdown-content">
+                  <li>
+                    <i class="fas fa-play-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Play Now</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-list-ul"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Queue</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-music"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Playlist</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-info-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Get Info</a
+                    >
+                  </li>
+                </ul>
+                <p>3.50</p>
+              </div>
             </div>
-            <!--profile picture-->
-            <div class="profile-picture">
-                <img src="/profile_picture.png" alt="profile-picture">
+
+            <div id="card-5" class="latest-release-card">
+              <img src="/latest-release-card/computer.jpg" />
+              <div class="card-details">
+                <h3>Right Away</h3>
+                <p>Dec, 2024</p>
+              </div>
+              <div class="dropdown">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle-5"
+                  class="dropdown-toggle"
+                />
+                <label for="dropdown-toggle-5" class="dropdown-button"
+                  >...</label
+                >
+                <ul class="dropdown-content">
+                  <li>
+                    <i class="fas fa-play-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Play Now</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-list-ul"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Queue</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-music"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Playlist</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-info-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Get Info</a
+                    >
+                  </li>
+                </ul>
+                <p>4.00</p>
+              </div>
             </div>
-        </nav>
-        <main>
-            <input type="checkbox" id="more-toggle" hidden>
-            <label for="more-toggle" class="more-button">Queue</label>
-            <aside class="aside-1">
-                <!--carousel-->
-                <div class="carousel section-margin">
-                        <img src="/carousel/carousel3.jpg">
-                        <img src="/carousel/carousel-new.jpg">
-                        <img src="/carousel/carousel-new2.jpg"> 
-                </div>
-
-                <!--latest relase section-->
-                <div class="latest-release-section  section-margin">
-                    <h1 class="heading-class">Latest Release</h1>
-                    <div class="latest-release">
-                        <!--cards-->
-
-                        <div id="card-1" class="latest-release-card">
-                            <img src="/latest-release-card/latest-release-1 (2).jpg">
-                            <div class="card-details">
-                                <h3>Valley</h3>
-                                <p>Dec, 2024</p>
-                            </div>
-                            <div class="dropdown">
-                                <input type="checkbox" id="dropdown-toggle-1" class="dropdown-toggle">
-                                <label for="dropdown-toggle-1" class="dropdown-button">...</label>
-                                <ul class="dropdown-content">
-                                    <li><i class="fas fa-play-circle"></i>&nbsp;<a class="anchor-decor" href="#">Play Now</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-list-ul"></i>&nbsp;<a class="anchor-decor" href="#">Add to Queue</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-music"></i>&nbsp;<a class="anchor-decor" href="#">Add to Playlist</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-info-circle"></i>&nbsp;<a class="anchor-decor" href="#">Get Info</a></li>
-                                </ul>
-                                <p>3.35</p>
-                            </div>
-                        </div>
-                        
-                        <div id="card-2" class="latest-release-card">
-                            <img src="/latest-release-card/latest-release-2.jpg">
-                            <div class="card-details">
-                                <h3>Stockholm Syndrome</h3>
-                                <p>Dec, 2024</p>
-                            </div>
-                            <div class="dropdown">
-                                <input type="checkbox" id="dropdown-toggle-2" class="dropdown-toggle">
-                                <label for="dropdown-toggle-2" class="dropdown-button">...</label>
-                                <ul class="dropdown-content">
-                                    <li><i class="fas fa-play-circle"></i>&nbsp;<a class="anchor-decor" href="#">Play Now</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-list-ul"></i>&nbsp;<a class="anchor-decor" href="#">Add to Queue</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-music"></i>&nbsp;<a class="anchor-decor" href="#">Add to Playlist</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-info-circle"></i>&nbsp;<a class="anchor-decor" href="#">Get Info</a></li>
-                                </ul>
-                                <p>3.20</p>
-                            </div>
-                        </div>
-
-                        <div id="card-3" class="latest-release-card">
-                            <img src="/latest-release-card/latest-release-4.png">
-                            <div class="card-details">
-                                <h3>Bliss</h3>
-                                <p>Dec, 2024</p>
-                            </div>
-                            <div class="dropdown">
-                                <input type="checkbox" id="dropdown-toggle-3" class="dropdown-toggle">
-                                <label for="dropdown-toggle-3" class="dropdown-button">...</label>
-                                <ul class="dropdown-content">
-                                    <li><i class="fas fa-play-circle"></i>&nbsp;<a class="anchor-decor" href="#">Play Now</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-list-ul"></i>&nbsp;<a class="anchor-decor" href="#">Add to Queue</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-music"></i>&nbsp;<a class="anchor-decor" href="#">Add to Playlist</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-info-circle"></i>&nbsp;<a class="anchor-decor" href="#">Get Info</a></li>
-                                </ul>
-                                <p>3.02</p>
-                            </div>
-                        </div>
-
-                        <div id="card-4" class="latest-release-card">
-                            <img src="/latest-release-card/latest-release-4.jpg">
-                            <div class="card-details">
-                                <h3>Meteoroid</h3>
-                                <p>Dec, 2024</p>
-                            </div>
-                            <div class="dropdown">
-                                <input type="checkbox" id="dropdown-toggle-4" class="dropdown-toggle">
-                                <label for="dropdown-toggle-4" class="dropdown-button">...</label>
-                                <ul class="dropdown-content">
-                                    <li><i class="fas fa-play-circle"></i>&nbsp;<a class="anchor-decor" href="#">Play Now</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-list-ul"></i>&nbsp;<a class="anchor-decor" href="#">Add to Queue</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-music"></i>&nbsp;<a class="anchor-decor" href="#">Add to Playlist</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-info-circle"></i>&nbsp;<a class="anchor-decor" href="#">Get Info</a></li>
-                                </ul>
-                                <p>3.50</p>
-                            </div>
-                        </div>
-
-                        <div id="card-5" class="latest-release-card">
-                            <img src="/latest-release-card/computer.jpg">
-                            <div class="card-details">
-                                <h3>Right Away</h3>
-                                <p>Dec, 2024</p>
-                            </div>
-                            <div class="dropdown">
-                                <input type="checkbox" id="dropdown-toggle-5" class="dropdown-toggle">
-                                <label for="dropdown-toggle-5" class="dropdown-button">...</label>
-                                <ul class="dropdown-content">
-                                    <li><i class="fas fa-play-circle"></i>&nbsp;<a class="anchor-decor" href="#">Play Now</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-list-ul"></i>&nbsp;<a class="anchor-decor" href="#">Add to Queue</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-music"></i>&nbsp;<a class="anchor-decor" href="#">Add to Playlist</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-info-circle"></i>&nbsp;<a class="anchor-decor" href="#">Get Info</a></li>
-                                </ul>
-                                <p>4.00</p>
-                            </div>
-                        </div>
-
-                        <div id="card-6" class="latest-release-card">
-                            <img src="/latest-release-card/latest-release-3.jpg">
-                            <div class="card-details">
-                                <h3>Innovation</h3>
-                                <p>Nov, 2024</p>
-                            </div>
-                            <div class="dropdown">
-                                <input type="checkbox" id="dropdown-toggle-6" class="dropdown-toggle">
-                                <label for="dropdown-toggle-6" class="dropdown-button">...</label>
-                                <ul class="dropdown-content">
-                                    <li><i class="fas fa-play-circle"></i>&nbsp;<a class="anchor-decor" href="#">Play Now</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-list-ul"></i>&nbsp;<a class="anchor-decor" href="#">Add to Queue</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-music"></i>&nbsp;<a class="anchor-decor" href="#">Add to Playlist</a></li>
-                                    <hr>
-                                    <li><i class="fas fa-info-circle"></i>&nbsp;<a class="anchor-decor" href="#">Get Info</a></li>
-                                </ul>
-                                <p>2.38</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                </div>
-
-                <!--popular artists section-->
-                <div class="popular-artists-section  section-margin">
-                    <h1 class="heading-class">Popular Artists</h1>
-                    <!--popular artists content-->
-                    <div class="popular-artists-content">
-                        <!--first artist-->
-                        <div id ="artist-1" class="artist-card flex-center">
-                            <div class="artist-card-img-container">
-                                <a  class = "flex-center" href="#">
-                                    <img src="/popular artists/bruno mars.jpg" alt="artist image failed to load">
-                                    <i class="fas fa-play play-effect"></i>
-                                </a>
-                            </div>
-                        
-                        </div>
-
-                         <!--second artist-->
-                         <div id ="artist-2" class="artist-card flex-center">
-                            <div class="artist-card-img-container">
-                                <a  class = "flex-center" href="#">
-                                    <img src="/popular artists/sixnine.jpg" alt="artist image failed to load">
-                                    <i class="fas fa-play play-effect"></i>
-                                </a>
-                            </div>
-                        
-                        </div>
-
-                         <!--third artist-->
-                        <div id ="artist-3" class="artist-card flex-center">
-                            <div class="artist-card-img-container">
-                                <a  class = "flex-center" href="#">
-                                    <img src="/popular artists/drake.jpg" alt="artist image failed to load">
-                                    <i class="fas fa-play play-effect"></i>
-                                </a>
-                            </div>
-                        
-                        </div>
-
-                        <!--fourth artist-->
-                        <div id ="artist-4" class="artist-card flex-center">
-                            <div class="artist-card-img-container">
-                                <a  class = "flex-center" href="#">
-                                    <img src="/popular artists/ed sheeran.jpg" alt="artist image failed to load">
-                                    <i class="fas fa-play play-effect"></i>
-                                </a>
-                            </div>
-                        
-                        </div>
-
-                        <!--fifth artist-->
-                        <div id ="artist-5" class="artist-card flex-center">
-                            <div class="artist-card-img-container">
-                                <a  class = "flex-center" href="#">
-                                    <img src="/popular artists/eminem.jpg" alt="artist image failed to load">
-                                    <i class="fas fa-play play-effect"></i>
-                                </a>
-                            </div>
-                        
-                        </div>
-
-
-                    </div>
-
-
-                </div>
-                
-                <!--music themes-->
-                <div class="section-margin theme-section">
-                    <h1 class="heading-class">Music Themes</h1>
-                
-                    <div class="music-themes-section">
-                    
-                            <div class="theme">
-                                <img class="card-image" src = "/music themes/vibe.jpg">
-                                <h2 class="text-above-card">Chill</h2>
-                            </div>
-        
-                            <div class="theme">
-                                <img class="card-image" src="/music themes/rock.jpg">
-                                <h2 class="text-above-card">Rock</h2>
-                            </div>
-                            
-                            <div class="theme">
-                                <img class="card-image"  src="/music themes/retro.jpg">
-                                <h2 class="text-above-card">Retro</h2>
-                            </div>
-        
-                            <div class="theme">
-                                <img class="card-image"  src="/music themes/love.jpg">
-                                <h2 class="text-above-card">Love</h2>
-                            </div>
-        
-                            <div class="theme">
-                                <img class="card-image"  src="/music themes/workout.jpg">
-                                <h2 class="text-above-card">Workout</h2>
-                            </div>
-        
-                    </div>
-                   
-
-                </div>
-
-                 
-                <!--music modes-->
-                <div class="music-modes-content section-margin">
-                            <div class="mode">
-                                <img src = "/music-modes/electronic.jpg">
-                                <h2 class="text-above-card">Electronic</h2>
-                            </div>
-
-                            <div class="mode">
-                                <img src = "/music-modes/party2.jpg">
-                                <h2 class="text-above-card">Party</h2>
-                            </div>
-
-                            <div class="mode">
-                                <img src = "/music-modes/travel-2.jpg">
-                                <h2 class="text-above-card">Travel</h2>
-                            </div>
-
-                </div>
-
-                <!--latest english-->
-                <div class=" latest-section section-margin">
-                    <h1 class="heading-class">Latest English</h1>
-                    <div class="latest-section-content">
-                    
-                        <!--cards-->
-                
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-1.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                               <img src="/latest-lang/latest-lang-2.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-3.jpg">
-                                <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                    
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-1.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-2.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-3.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-1.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-2.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-                <!--latest hindi-->
-                <div class=" latest-section section-margin">
-                    <h1 class="heading-class">Latest Hindi</h1>
-                    <div class="latest-section-content">
-                    
-                        <!--cards-->
-                
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-1.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                               <img src="/latest-lang/latest-lang-2.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-3.jpg">
-                                <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                    
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-1.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-2.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-3.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-1.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Wait</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                        <div class="latest-section-card">
-                            <div class="flex-center">     
-                                <img src="/latest-lang/latest-lang-2.jpg">
-                               <i class="fas fa-play play-effect"></i>
-                            </div>
-                            <p class="font-color font-size">I'll Waitdsfjdsfvdshfvsjdvdsjhvdshfvdshfvdshfvdshj</p>
-                            <p class="font-color">Dec 11, 2024</p>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-            
-            </aside>
-
-            <!--second aside section-->
-            <aside id = "aside-2" class="aside-2">
-
-                <!--heading div-->
-                <div class="playlist-heading">
-                    <h1 class="heading-class">
-                        Queue
-                    </h1>
-                    
-                    <!--dropdown to choose the side section-->
-                    <div class="dropdown">
-                        <input type="checkbox" id="dropdown-toggle-8" class="dropdown-toggle">
-                        <!-- <span class="font-color">Queue</span> -->
-                        <label for="dropdown-toggle-8" class="dropdown-button"><i class="fas fa-chevron-circle-down"></i></label>
-                        <ul class="dropdown-content">
-                            <li>&nbsp;<a class="anchor-decor" href="#">Playlists</a></li>
-                            <hr>
-                            <li>&nbsp;<a class="anchor-decor" href="#">Favourites</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!--Playlist/Queue content-->
-                <div class="playlist-content">
-
-                    <!--queue cards-->
-                    <div class="playlist-card">
-                        <h3 class="font-color">01</h3>
-
-                            <img src="/latest-lang/latest-lang-2.jpg">
-
-                            <div class="card-details">
-                                <h3>Running in Circle</h3>
-                                <p>Max</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-                    
-                    <div class="playlist-card">
-                        <h3 class="font-color">02</h3>
-
-                            <img src="/latest-lang/back-in-time.jpg">
-
-                            <div class="card-details">
-                                <h3>Through Time</h3>
-                                <p>Wallace</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">03</h3>
-
-                            <img src="/latest-lang/latest-lang-1.jpg">
-
-                            <div class="card-details">
-                                <h3>Frostbite</h3>
-                                <p>Kybalion</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">04</h3>
-
-                            <img src="/latest-lang/latest-lang-2.jpg">
-
-                            <div class="card-details">
-                                <h3>Such Peace</h3>
-                                <p>Logan</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">05</h3>
-
-                            <img src="/latest-lang/latest-lang-3.jpg">
-
-                            <div class="card-details">
-                                <h3>Next is Past</h3>
-                                <p>Ms. Minute</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">06</h3>
-
-                            <img src="/latest-lang/latest-lang-1.jpg">
-
-                            <div class="card-details">
-                                <h3>Somebody</h3>
-                                <p>Alan</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">07</h3>
-
-                            <img src="/latest-lang/back-in-time.jpg">
-
-                            <div class="card-details">
-                                <h3>Back In Time</h3>
-                                <p>Arjit</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">08</h3>
-
-                            <img src="/latest-lang/latest-lang-3.jpg">
-
-                            <div class="card-details">
-                                <h3>Sky High</h3>
-                                <p>Arman</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-                    <div class="playlist-card">
-                        <h3 class="font-color">09</h3>
-
-                            <img src="/latest-lang/latest-lang-1.jpg">
-
-                            <div class="card-details">
-                                <h3>See Through</h3>
-                                <p>Alan</p>
-                            </div>
-
-                        <i class="far fa-heart font-color"></i>
-                    </div>
-
-
-
-                </div>
-
-
-            </aside>
-
-
-        </main>
-    </body>
+
+            <div id="card-6" class="latest-release-card">
+              <img src="/latest-release-card/latest-release-3.jpg" />
+              <div class="card-details">
+                <h3>Innovation</h3>
+                <p>Nov, 2024</p>
+              </div>
+              <div class="dropdown">
+                <input
+                  type="checkbox"
+                  id="dropdown-toggle-6"
+                  class="dropdown-toggle"
+                />
+                <label for="dropdown-toggle-6" class="dropdown-button"
+                  >...</label
+                >
+                <ul class="dropdown-content">
+                  <li>
+                    <i class="fas fa-play-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Play Now</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-list-ul"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Queue</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-music"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Add to Playlist</a
+                    >
+                  </li>
+                  <hr />
+                  <li>
+                    <i class="fas fa-info-circle"></i>&nbsp;<a
+                      class="anchor-decor"
+                      href="#"
+                      >Get Info</a
+                    >
+                  </li>
+                </ul>
+                <p>2.38</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--popular artists section-->
+        <div class="popular-artists-section section-margin">
+          <h1 class="heading-class">Popular Artists</h1>
+          <!--popular artists content-->
+          <div class="popular-artists-content">
+            <!--first artist-->
+            <div id="artist-1" class="artist-card flex-center">
+              <div class="artist-card-img-container">
+                <a class="flex-center" href="#">
+                  <img
+                    src="/popular artists/bruno mars.jpg"
+                    alt="artist image failed to load"
+                  />
+                  <i class="fas fa-play play-effect"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--second artist-->
+            <div id="artist-2" class="artist-card flex-center">
+              <div class="artist-card-img-container">
+                <a class="flex-center" href="#">
+                  <img
+                    src="/popular artists/sixnine.jpg"
+                    alt="artist image failed to load"
+                  />
+                  <i class="fas fa-play play-effect"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--third artist-->
+            <div id="artist-3" class="artist-card flex-center">
+              <div class="artist-card-img-container">
+                <a class="flex-center" href="#">
+                  <img
+                    src="/popular artists/drake.jpg"
+                    alt="artist image failed to load"
+                  />
+                  <i class="fas fa-play play-effect"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--fourth artist-->
+            <div id="artist-4" class="artist-card flex-center">
+              <div class="artist-card-img-container">
+                <a class="flex-center" href="#">
+                  <img
+                    src="/popular artists/ed sheeran.jpg"
+                    alt="artist image failed to load"
+                  />
+                  <i class="fas fa-play play-effect"></i>
+                </a>
+              </div>
+            </div>
+
+            <!--fifth artist-->
+            <div id="artist-5" class="artist-card flex-center">
+              <div class="artist-card-img-container">
+                <a class="flex-center" href="#">
+                  <img
+                    src="/popular artists/eminem.jpg"
+                    alt="artist image failed to load"
+                  />
+                  <i class="fas fa-play play-effect"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--music themes-->
+        <div class="section-margin theme-section">
+          <h1 class="heading-class">Music Themes</h1>
+
+          <div class="music-themes-section">
+            <div class="theme">
+              <img class="card-image" src="/music themes/vibe.jpg" />
+              <h2 class="text-above-card">Chill</h2>
+            </div>
+
+            <div class="theme">
+              <img class="card-image" src="/music themes/rock.jpg" />
+              <h2 class="text-above-card">Rock</h2>
+            </div>
+
+            <div class="theme">
+              <img class="card-image" src="/music themes/retro.jpg" />
+              <h2 class="text-above-card">Retro</h2>
+            </div>
+
+            <div class="theme">
+              <img class="card-image" src="/music themes/love.jpg" />
+              <h2 class="text-above-card">Love</h2>
+            </div>
+
+            <div class="theme">
+              <img class="card-image" src="/music themes/workout.jpg" />
+              <h2 class="text-above-card">Workout</h2>
+            </div>
+          </div>
+        </div>
+
+        <!--music modes-->
+        <div class="music-modes-content section-margin">
+          <div class="mode">
+            <img src="/music-modes/electronic.jpg" />
+            <h2 class="text-above-card">Electronic</h2>
+          </div>
+
+          <div class="mode">
+            <img src="/music-modes/party2.jpg" />
+            <h2 class="text-above-card">Party</h2>
+          </div>
+
+          <div class="mode">
+            <img src="/music-modes/travel-2.jpg" />
+            <h2 class="text-above-card">Travel</h2>
+          </div>
+        </div>
+
+        <!--latest english-->
+        <div class="latest-section section-margin">
+          <h1 class="heading-class">Latest English</h1>
+          <div class="latest-section-content">
+            <!--cards-->
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-1.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-2.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-3.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-1.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-2.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-3.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-1.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-2.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!--latest hindi-->
+        <div class="latest-section section-margin">
+          <h1 class="heading-class">Latest Hindi</h1>
+          <div class="latest-section-content">
+            <!--cards-->
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-1.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-2.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-3.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-1.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-2.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-3.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-1.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">I'll Wait</p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+
+            <div class="latest-section-card">
+              <div class="flex-center">
+                <img src="/latest-lang/latest-lang-2.jpg" />
+                <i class="fas fa-play play-effect"></i>
+              </div>
+              <p class="font-color font-size">
+                I'll Waitdsfjdsfvdshfvsjdvdsjhvdshfvdshfvdshfvdshj
+              </p>
+              <p class="font-color">Dec 11, 2024</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!--second aside section-->
+      <aside id="aside-2" class="aside-2">
+        <!--heading div-->
+        <div class="playlist-heading">
+          <h1 class="heading-class">Queue</h1>
+
+          <!--dropdown to choose the side section-->
+          <div class="dropdown">
+            <input
+              type="checkbox"
+              id="dropdown-toggle-8"
+              class="dropdown-toggle"
+            />
+            <!-- <span class="font-color">Queue</span> -->
+            <label for="dropdown-toggle-8" class="dropdown-button"
+              ><i class="fas fa-chevron-circle-down"></i
+            ></label>
+            <ul class="dropdown-content">
+              <li>&nbsp;<a class="anchor-decor" href="#">Playlists</a></li>
+              <hr />
+              <li>&nbsp;<a class="anchor-decor" href="#">Favourites</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--Playlist/Queue content-->
+        <div class="playlist-content font-color">
+          <!--queue cards-->
+          <div class="playlist-card">
+            <h3>01</h3>
+
+            <img src="/latest-lang/latest-lang-2.jpg" />
+
+            <div class="card-details">
+              <h3>Running in Circle</h3>
+              <p>Max</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>02</h3>
+
+            <img src="/latest-lang/back-in-time.jpg" />
+
+            <div class="card-details">
+              <h3>Through Time</h3>
+              <p>Wallace</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>03</h3>
+
+            <img src="/latest-lang/latest-lang-1.jpg" />
+
+            <div class="card-details">
+              <h3>Frostbite</h3>
+              <p>Kybalion</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>04</h3>
+
+            <img src="/latest-lang/latest-lang-2.jpg" />
+
+            <div class="card-details">
+              <h3>Such Peace</h3>
+              <p>Logan</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>05</h3>
+
+            <img src="/latest-lang/latest-lang-3.jpg" />
+
+            <div class="card-details">
+              <h3>Next is Past</h3>
+              <p>Ms. Minute</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>06</h3>
+
+            <img src="/latest-lang/latest-lang-1.jpg" />
+
+            <div class="card-details">
+              <h3>Somebody</h3>
+              <p>Alan</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>07</h3>
+
+            <img src="/latest-lang/back-in-time.jpg" />
+
+            <div class="card-details">
+              <h3>Back In Time</h3>
+              <p>Arjit</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>08</h3>
+
+            <img src="/latest-lang/latest-lang-3.jpg" />
+
+            <div class="card-details">
+              <h3>Sky High</h3>
+              <p>Arman</p>
+            </div>
+
+            <i class="far fa-heart"></i>
+          </div>
+
+          <div class="playlist-card">
+            <h3>09</h3>
+
+            <img src="/latest-lang/latest-lang-1.jpg" />
+
+            <div class="card-details">
+              <h3>See Through</h3>
+              <p>Alan</p>
+            </div>
+
+            <i class="far fa-heart font-color"></i>
+          </div>
+        </div>
+      </aside>
+    </main>
+    
+    <!--fixed footer-->
+    <footer>
+      <div class="current-song-description">
+        <!--song image-->
+        <img src="/latest-lang/latest-lang-1.jpg" />
+
+        <!--song name-->
+        <div class="card-details">
+          <h3>Imagine</h3>
+          <p>John Lenon</p>
+        </div>
+
+        <!--heart and block icon-->
+        <div class="heart-and-block-icon">
+          <span>
+            <i class= "far fa-heart font-color"></i>
+          </span>
+          <span>
+            <i class="fas fa-ban font-color"></i>
+          </span>
+        </div>
+      </div>
+      <!--music controls-->
+      <div class="player">
+        <div class="music-controls">
+          <div><i class="fas fa-random font-color"></i></div>
+          <div><i class="fas fa-step-backward font-color"></i></div>
+          <div><i class="fas fa-pause-circle font-color"></i></div>
+          <div><i class="fas fa-step-forward font-color"></i></div>
+          <div><i class="fas fa-redo font-color"></i></div>
+        </div>
+
+        <!--slider div-->
+        <div class="slider font-color">
+          <!--current time-->
+          <p>1.39</p>
+          <!--slider-->
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="slider-class"
+            id="myRange"
+          />
+          <!--total duration-->
+          <p>4.44</p>
+        </div>
+      </div>
+
+      <!--volume slider and other controls-->
+      <div class="other-controls font-color">
+        <div>
+          <i class="fas fa-list-ul"></i>
+        </div>
+        <div>
+          <i class="fas fa-laptop"></i>
+        </div>
+       
+        <div class="slider">
+          <div>
+            <i class="fas fa-volume-up"></i>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="0"
+            class="slider-class"
+            id="myRange"
+            style="margin-top: 0px"
+          />
+         
+        </div>
+        <div>
+          <i class="fas fa-expand-alt"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
