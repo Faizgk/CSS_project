@@ -8,26 +8,34 @@ p {
 	margin: 0px;
 }
 
-body{
+* {
+     box-sizing: border-box;
+}
+
+html, body{
     margin: 0;
+    padding: 0;
+    height: 100%;
     background-image: url(/bg-image.jpg), url(/sky.jpg);
-    /* background-position: center; */
+    display: flex;
+    flex-direction: column;
 
 }
 
 
-
-
+main{
+    border: 3px solid blue;
+    overflow: hidden;
+    flex: 1;
+}
 
 .navigation-bar{
-    height : auto;
-    max-height: 300px;
+    border: 2px solid red;
 	background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(32, 31, 31, 0) );
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    box-sizing: center;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
@@ -141,16 +149,14 @@ aside{
 }
 
 .aside-1{
-    margin-top: 40px;
     width: 75%;
-    height: 83vh;
+    height: 86vh;
     overflow-y: scroll;
 }
 .aside-2{
-    width: 22%;
-    margin: 10px;
+    height: 86vh;
+    width: 24%;
     position: absolute;
-    margin-top: 70px;
     vertical-align: top; /* keep the playlist at the top of the second half*/
 }
 
@@ -612,14 +618,13 @@ color: rgba(20, 134, 115, 0.685);
     cursor: pointer;
 }
 .playlist-content{
-    height: 70vh;
+    height: 92%;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 
 .playlist-heading{
-    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -630,7 +635,7 @@ color: rgba(20, 134, 115, 0.685);
     align-items: center;
     height: fit-content;
     flex-direction: row;
-    width: 99%;
+    width: 100%;
     background-color: rgba(28, 29, 29, 0.821);
     margin-bottom: 5px;
 }
@@ -667,11 +672,7 @@ color: rgba(20, 134, 115, 0.685);
 
 
 @media (max-width: 1120px) { 
-    main{
-        position: relative;
-        display: flex;
-        flex-direction: row-reverse;
-    }
+
 
     .aside-2{
         position: relative;
@@ -691,7 +692,6 @@ color: rgba(20, 134, 115, 0.685);
 
     .navigation-bar{
         gap: 0.5vh;
-        position: fixed;
         z-index: 1000;
         width: 90%;
         /* box-shadow: 0px 1px 10px; */
@@ -699,7 +699,7 @@ color: rgba(20, 134, 115, 0.685);
 
     .aside-1{
         height: 75vh;
-        margin-top: 220px;
+        margin-top: 150px;
         width: 99%;
         border-top: 0.5px solid rgba(255, 255, 255, 0.199);
 
@@ -822,15 +822,14 @@ color: rgba(20, 134, 115, 0.685);
 
 /*footer styles*/
 footer{
-    width: 99.8%;
     background-color:  rgba(6, 49, 42, 0.74);
-    height: fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     z-index: 50000;
     box-shadow: 0px 0px 5px;
-
+    border: 1px solid yellow;
+    gap: 1vh;
 }
 footer > div {
     margin-top: 3px;
@@ -838,6 +837,7 @@ footer > div {
 .heart-and-block-icon{
     display: flex;
     gap: 20px;
+
 }
 
 .current-song-description{
@@ -845,25 +845,27 @@ footer > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 2;
+  
 }
 
 .current-song-description > img{
     width: 60px;
+    
 }
-
 
 .music-controls{
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-shrink: 3;
+
 }
 .music-controls > div{
-    font-size: 1.5rem;
+    font-size: 150%;
 }
-.player{
-    height: 100%;
-}
+
 .slider{
     display: flex;
     justify-content: space-between;
@@ -871,6 +873,8 @@ footer > div {
     gap: 10px;
     margin: 0px 20px;
     width: 50vw;
+    flex-shrink: 4;
+
 
 }
 .other-controls{
@@ -878,7 +882,7 @@ footer > div {
  
     align-items: center;
     margin: 0px 20px;
-
+    flex-shrink: 5;
 
 }
 .slider-class{
