@@ -687,7 +687,7 @@ color: rgba(20, 134, 115, 0.685);
 
     .aside-1{
         height: 100%;
-        width: 99%;
+        width: 100%;
         border-top: 0.5px solid rgba(255, 255, 255, 0.199);
 
     }
@@ -817,6 +817,8 @@ footer{
     box-shadow: 0px 0px 5px;
     border: 1px solid yellow;
     gap: 1vh;
+    overflow: visible;
+
 
 }
 footer > div {
