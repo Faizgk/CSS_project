@@ -42,6 +42,7 @@ main{
     transition: all ease-in-out 1s;
     position: sticky;
     gap: 1vh;
+    margin-bottom: 10px;
 }
 
 .logo{
@@ -150,7 +151,6 @@ aside{
     width: 75%;
     height: 100%;
     overflow-y: scroll;
-    border:  2px solid white;
 }
 .aside-2{
     height: 87%;
@@ -159,11 +159,14 @@ aside{
     vertical-align: top; /* keep the playlist at the top of the second half*/
 }
 
+.button-div{
+    padding-left: 80%;
+}
 /*open aside-2 element (queue/playlist section) button for low screen width*/
 .more-button{
     display: none;
     padding: 5px;
-    border: 0.2px solid white;
+    border: 1px solid rgb(112, 102, 102);
     color: white;
     background-image: linear-gradient(180deg, rgb(172, 165, 165), #0f4638);
     z-index: 9000;
@@ -673,13 +676,13 @@ color: rgba(20, 134, 115, 0.685);
     .aside-2{
         position: relative;
         width: 60vw;
-        height: 100vh;
-        z-index: 100000;
+        height: 50%;
+        z-index: 1;
         background-color: rgba(0, 0, 0, 0.9);
         display: none;
     }
     .playlist-content{
-        height: 90%;
+        height: 70%;
     }
     .playlist-card > .card-details{
         font-size: 0.75rem;
@@ -815,9 +818,8 @@ footer{
     align-items: center;
     z-index: 50000;
     box-shadow: 0px 0px 5px;
-    border: 1px solid yellow;
-    overflow: visible;
     padding: 10px;
+    gap: 5px;
 
 
 }
@@ -826,27 +828,23 @@ footer > div {
 }
 .heart-and-block-icon{
     display: flex;
-    gap: 20px;
-
+    gap: 1vw;
 }
 
 .current-song-description{
-    flex-basis: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
+    gap: 5px;
   
+}
+.player{
+    flex-grow: 2;
 }
 
 .current-song-description > img{
     width: 60px;
     
-}
-.player{
-    border: 1px solid blue;
-    flex-grow: 3;
-
 }
 
 .music-controls{
@@ -875,25 +873,14 @@ footer > div {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    border: 1px solid white;
-    flex-basis: 200px;
-
 
 }
+
 .slider-class{
-    width: 90%;
-
-}
-.other-controls{
-    display: flex;
+    width: 100%;
 }
 .other-controls .slider-class{
-    width: 5vw;
-}
-
-.other-controls .slider{
-    display: flex;
-    align-items: center;
+    width: 40%;
 }
 
 @media (max-width : 576px) {
