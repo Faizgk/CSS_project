@@ -819,7 +819,7 @@
     </main>
     
     <!--fixed footer-->
-    <footer>
+    <footer class="font-color">
       <div class="current-song-description">
         <!--song image-->
         <img src="/latest-lang/latest-lang-1.jpg" />
@@ -832,22 +832,20 @@
 
         <!--heart and block icon-->
         <div class="heart-and-block-icon">
-          <span>
-            <i class= "far fa-heart font-color"></i>
-          </span>
-          <span>
-            <i class="fas fa-ban font-color"></i>
-          </span>
+          <i class= "far fa-heart font-color"></i>
+          <i class="fas fa-ban font-color"></i>
         </div>
+
       </div>
+
       <!--music controls-->
       <div class="player">
         <div class="music-controls">
-          <div><i class="fas fa-random font-color"></i></div>
-          <div><i class="fas fa-step-backward font-color"></i></div>
-          <div><i class="fas fa-pause-circle font-color"></i></div>
-          <div><i class="fas fa-step-forward font-color"></i></div>
-          <div><i class="fas fa-redo font-color"></i></div>
+          <div><i class="fas fa-random"></i></div>
+          <div><i class="fas fa-step-backward"></i></div>
+          <div><i class="fas fa-pause-circle"></i></div>
+          <div><i class="fas fa-step-forward"></i></div>
+          <div><i class="fas fa-redo"></i></div>
         </div>
 
         <!--slider div-->
@@ -866,32 +864,28 @@
           <!--total duration-->
           <p>4.44</p>
         </div>
+        
       </div>
 
       <!--volume slider and other controls-->
       <div class="other-controls font-color">
-        <div>
           <i class="fas fa-list-ul"></i>
-        </div>
-        <div>
           <i class="fas fa-laptop"></i>
-        </div>
        
-        <i class="fas fa-volume-up"></i>
-        <input
-            type="range"
-            min="0"
-            max="100"
-            value="0"
-            class="slider-class"
-            id="myRange"
-            style="margin-top: 0px"
-        />
- 
-
-        <div>
+          <div class="volume-icon-slider">
+            <i class="fas fa-volume-up"></i>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              class="slider-class"
+              id="myRange"
+              style="margin-top: 0px"
+            />
+          </div>
+          
           <i class="fas fa-expand-alt"></i>
-        </div>
       </div>
     </footer>
   </body>

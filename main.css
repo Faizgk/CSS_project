@@ -153,14 +153,17 @@ aside{
     overflow-y: scroll;
 }
 .aside-2{
-    height: 87%;
+    height: 100%;
     width: 24%;
-    position: absolute;
-    vertical-align: top; /* keep the playlist at the top of the second half*/
+    vertical-align: top;
+    overflow-y: scroll;
+
 }
 
+/*div that keeps the queue button*/
 .button-div{
-    padding-left: 80%;
+    display: flex;
+    flex-direction: row-reverse;
 }
 /*open aside-2 element (queue/playlist section) button for low screen width*/
 .more-button{
@@ -170,6 +173,7 @@ aside{
     color: white;
     background-image: linear-gradient(180deg, rgb(172, 165, 165), #0f4638);
     z-index: 9000;
+    max-width: fit-content;
 
 }
 
@@ -617,13 +621,14 @@ color: rgba(20, 134, 115, 0.685);
     cursor: pointer;
 }
 .playlist-content{
-    height: 92%;
+    height: calc(100% - 50px); /*shoud take the space after subtracting the space occupied by the heading(i.e 50px)*/
     width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: scroll;
+    box-sizing: border-box;
 }
 
 .playlist-heading{
+    height: 50px;
     display: flex;
     justify-content: space-between;
 }
@@ -653,19 +658,13 @@ color: rgba(20, 134, 115, 0.685);
     background-color:rgba(7, 78, 66, 0.685);
 }
 
+/*common class for flex sub divs in main section*/
 .flex-center{
  display: flex;
  justify-content: center;
  align-items: center;
  height: 100%;
  width: 100%;
-}
-
-/*use this */
-.flex-space{
-    display: flex;
-    justify-items: center;
-    justify-content: space-between;
 }
 
 
@@ -699,7 +698,6 @@ color: rgba(20, 134, 115, 0.685);
     }
       /* Show the second aside when the checkbox is checked */
     #more-toggle:checked ~ .aside-2 {
-        /* margin-top: 220px; */
         display: block;
         position: fixed;
         overflow: hidden;
@@ -709,8 +707,8 @@ color: rgba(20, 134, 115, 0.685);
         top: 0;
         left: 0;
         width: 60%;
-        height: 100%; /* Adjust height */
-        z-index: 10000; /* Make sure it's above aside-1 */
+        height: 100%;/* Adjust height */
+        z-index: 60000; /* Make sure it's above aside-1 */
      
     }
     #more-toggle:checked ~ label.more-button{
@@ -814,32 +812,29 @@ color: rgba(20, 134, 115, 0.685);
 footer{
     background-color:  rgba(6, 49, 42, 0.74);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 50000;
-    box-shadow: 0px 0px 5px;
-    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);
+    padding: 10px 20px;
     gap: 5px;
+}
 
-
-}
-footer > div {
-    margin-top: 3px;
-}
-.heart-and-block-icon{
-    display: flex;
-    gap: 1vw;
-}
 
 .current-song-description{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 5px;
-  
+    justify-content: space-between; 
+    gap: 20px; 
+    row-gap: 1px;
+}
+.heart-and-block-icon{
+    display: flex;
+    gap: 20px;
 }
 .player{
-    flex-grow: 2;
+    flex-grow: 1;
+    max-width: 900px;
 }
 
 .current-song-description > img{
@@ -865,13 +860,11 @@ footer > div {
     gap: 5px;
     margin: 0px 20px;
     flex-basis: 300px;
-
-
 }
 .other-controls{
     display:flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 10px;
 
 }
@@ -879,16 +872,28 @@ footer > div {
 .slider-class{
     width: 100%;
 }
-.other-controls .slider-class{
-    width: 40%;
+
+.volume-icon-slider{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 70%;
+    max-width: 100px;
 }
 
 @media (max-width : 576px) {
     footer{
         font-size: small;
     }
+    .current-song-description{
+        flex-direction: column;
+    }
     .current-song-description > img{
         display: none;
+    }
+    .other-controls{
+        width: 120px;
+        flex-wrap: wrap;
     }
 
 }
