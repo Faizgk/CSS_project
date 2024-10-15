@@ -882,6 +882,10 @@ footer{
     max-width: 100px;
 }
 
+.fa-heart:hover{
+    color: red;
+}
+
 @media (max-width : 576px) {
     footer{
         font-size: small;
