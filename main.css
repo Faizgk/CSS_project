@@ -361,7 +361,7 @@ color: rgba(20, 134, 115, 0.685);
 }
 
 .playlist-heading .dropdown-content{
-    bottom: -160%;
+    bottom: -275%;
     z-index: 7;
      
 }
@@ -630,6 +630,7 @@ color: rgba(20, 134, 115, 0.685);
 .playlist-heading{
     height: 50px;
     display: flex;
+    padding: 10px;
     justify-content: space-between;
 }
 .playlist-card{
@@ -681,7 +682,7 @@ color: rgba(20, 134, 115, 0.685);
         display: none;
     }
     .playlist-content{
-        height: 70%;
+        height: calc(100% - 50px);
     }
     .playlist-card > .card-details{
         font-size: 0.75rem;
@@ -790,9 +791,7 @@ color: rgba(20, 134, 115, 0.685);
         margin-right: 5%;
 
     }
-    .playlist-heading{
-        margin: 30px;
-    }
+
 }
 
 /*auto-scroll animation for smaller screens*/
