@@ -251,7 +251,8 @@ aside{
     transition: width 0.4s ease,  all 0.3s ease; 
 }
 .latest-release-card:hover {
-    box-shadow: 0px 0px 35px rgba(13, 172, 145, 0.685); 
+    
+    box-shadow: 0px 0px 35px rgba(11, 196, 125, 0.685); 
     /* box-shadow: 0px 0px 35px rgba(24, 126, 126, 0.6);  */
     transform: scale(103%);
     z-index: 1;
