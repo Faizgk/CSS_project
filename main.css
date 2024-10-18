@@ -25,7 +25,7 @@ html, body{
 
 
 main{
-    overflow: scroll;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -156,7 +156,6 @@ aside{
     height: 100%;
     width: 24%;
     vertical-align: top;
-    overflow-y: scroll;
 
 }
 
@@ -312,10 +311,12 @@ aside{
     cursor: pointer;
     letter-spacing: 0.12cm;
 }
-.dropdown-button:hover{
-color: rgba(20, 134, 115, 0.685);
-}
+/*used nth-child as it is used in multiple places as different type of elements*/
+.playlist-heading :nth-child(2):hover{
+    color: rgba(93, 206, 159, 0.685);
+    cursor: default;
 
+}
 
 
 .dropdown-content{
@@ -630,8 +631,9 @@ color: rgba(20, 134, 115, 0.685);
 .playlist-heading{
     height: 50px;
     display: flex;
-    padding: 10px;
+    padding: 15px 0px;
     justify-content: space-between;
+    align-items: first baseline;
 }
 .playlist-card{
     padding: 0px 10px;
@@ -793,6 +795,9 @@ color: rgba(20, 134, 115, 0.685);
     }
     .playlist-card:hover{
         background-color: #576461;
+    }
+    .playlist-heading{
+        margin: 0px 5px;
     }
 
 }
