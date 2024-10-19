@@ -29,7 +29,6 @@ main{
     box-sizing: border-box;
 }
 
-
 .navigation-bar{
 	background-image: linear-gradient(180deg, rgb(0, 0, 0), rgba(32, 31, 31, 0) );
     display: flex;
@@ -116,18 +115,9 @@ main{
     height: auto;
     width: auto;
     display: flex;
-
-}
-.notification-bell i{
- color: white;
- font-size : 20px;
- padding-right: 5px;
-
-}
-
-.notification-text{
-    font-size: 1rem;
     color: white;
+    gap: 0.5vw;
+    font-size : 1rem;
 }
 
 .profile-picture{
@@ -169,11 +159,9 @@ aside{
     display: none;
     padding: 5px;
     border: 1px solid rgb(112, 102, 102);
-    color: white;
     background-image: linear-gradient(180deg, rgb(172, 165, 165), #0f4638);
     z-index: 9000;
     max-width: fit-content;
-
 }
 
 .more-button:hover{
@@ -235,7 +223,6 @@ aside{
     width: 100%;
     justify-content: space-between;
     gap: 5vh;
-    /* border: 1px solid white; */
     
 }
 
@@ -267,7 +254,6 @@ aside{
 }
 
 .card-details{
-    color: white;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -300,7 +286,6 @@ aside{
 }
 .dropdown > p{
     margin-top: 20px;
-    color: white;
 }
 .dropdown-button{
     background-color: transparent;
@@ -333,7 +318,6 @@ aside{
     bottom: 85%;
 }
 .dropdown-content > li {
-    color: white;
     list-style-type: none;
 }
 
@@ -380,7 +364,6 @@ aside{
 }
 
 .artist-card{
-    /* width: 20vw; */
     height: auto;
     min-width: 130px;
     max-width: 180px;
@@ -520,20 +503,14 @@ aside{
     height: auto;
     justify-content: flex-start;
     height: fit-content;    
-    /* border: 2px solid  rgba(194, 190, 190, 0.733); */
-    /* box-shadow: 0px 0px 50px rgb(132, 209, 214); */
-
 }
 .mode{
     width: 33.33%;
     min-width: 200px;
-    /* margin-bottom: 20px; */
     height: auto;
     overflow: hidden;
     background-color:rgba(19, 19, 19, 0.9);
     box-shadow: 0px 10px 30px;
-
-    /* border: 2.9px solid rgba(194, 190, 190, 0.733); */
 }
 
 /*text in music modes card*/
@@ -564,7 +541,6 @@ aside{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    /* border: 1px solid red; */
 }
 
 .latest-section-card{
@@ -588,7 +564,6 @@ aside{
 
 .latest-section-card:hover {
     transform: scale(1.05);
-    /* background-color: #d0d4d449; */
 }
 
 /*the div with image and play-button*/
