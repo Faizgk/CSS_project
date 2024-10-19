@@ -36,7 +36,7 @@
                 <input type="text" name="search" placeholder="Search" />
             </div>
             <!-- notification bell-->
-            <div class="notification-bell">
+            <div class="notification-bell flex-div">
                 <span style="font-size: 20px;"><i class="fa-regular fa-bell"></i></span>
                 <span>Notifications</span>
             </div>
@@ -44,11 +44,14 @@
             <div class="profile-picture">
                 <img src="/profile_picture.png" alt="profile-picture" />
             </div>
-
+        </div>
+        <div class="button-div">
+            <label for="more-toggle" class="more-button font-color">More</label>
         </div>
     </header>
 
     <main>
+        <input type="checkbox" id="more-toggle" hidden />
         <aside class="aside-1">
             <!-- this is for the jumbotron -->
             <div class="jumbotron section-margin font-color blur-bg">
