@@ -638,6 +638,9 @@ aside{
  width: 100%;
 }
 
+.aside-2 .playlist-card{
+    animation: scrollHintY 1s ease-in reverse;
+}
 
 
 @media (max-width: 1120px) { 
@@ -778,6 +781,17 @@ aside{
     }
 
 }
+@keyframes scrollHintY{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-120px);
+
+    }
+
+}
+
 
 /*footer styles*/
 footer{
