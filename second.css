@@ -59,9 +59,6 @@
 }
 
 
-.aside-2 .playlist-card{
-    animation: scrollHintY 1s ease-in reverse;
-}
 
 .aside-1 .playlist-content {
     height: fit-content;
@@ -136,13 +133,3 @@
     
 }
 
-@keyframes scrollHintY{
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(-120px);
-
-    }
-
-}
