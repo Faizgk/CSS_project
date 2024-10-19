@@ -35,7 +35,7 @@ main{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: last baseline;
     padding-left: 5%;
     padding-right: 5%;
     transition: all ease-in-out 1s;
@@ -123,6 +123,7 @@ main{
 .profile-picture{
     width: 50px;
     height: 50px;
+    margin: 10px;
     overflow: hidden;
     border-radius: 50%;
 }
