@@ -472,21 +472,6 @@ aside{
 ::-webkit-scrollbar {
     width: 0px;
 }
-::-webkit-scrollbar-track {
-    background: none; 
-}
-::-webkit-scrollbar-track:hover{
-    background: #2c2b2b; 
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #999; 
-    border-radius: 10px; 
-}
-
-::-webkit-scrollbar:hover {
-    background-color: #444242; 
-}
 
 .music-themes-section{
     padding-top: 20px;

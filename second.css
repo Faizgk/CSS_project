@@ -58,12 +58,15 @@
     background-position: left;
 }
 
+
+.aside-2 .playlist-card{
+    animation: scrollHintY 1s ease-in reverse;
+}
+
 .aside-1 .playlist-content {
     height: fit-content;
     cursor: default;
 }
-
-
 
 .aside-1 > div{
     width: 90%; 
@@ -83,7 +86,8 @@
 }
 #similar-artists .playlist-card > img{
     margin: 0;
-    max-width: 77px;
+    max-width: 70px;
+    max-height: 80px;
 }
 #similar-artists .card-details{
     width: auto;
@@ -94,6 +98,8 @@
     align-items: end;
     gap: 1vh;
 }
+
+
 
 /*three dots hover effect in similar artists section*/
 #similar-artists .playlist-card :nth-child(3)>h3:hover{
@@ -128,4 +134,15 @@
     }
 
     
+}
+
+@keyframes scrollHintY{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-120px);
+
+    }
+
 }
